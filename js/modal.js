@@ -15,4 +15,13 @@
       // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
       refs.modal.classList.toggle('is-open');
     }
-  })();
+})();
+  // Открыть модальное окно
+document.querySelector('[data-modal-open]').addEventListener('click', function() {
+  document.querySelector('.backdrop').classList.add('open');
+});
+
+// Закрыть модальное окно
+document.querySelector('[data-modal-close]').addEventListener('click', function() {
+  document.querySelector('.backdrop').classList.remove('open');
+});
